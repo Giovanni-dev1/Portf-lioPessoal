@@ -15,7 +15,7 @@ Este projeto é um portfolio pessoal desenvolvido com o objetivo de apresentar m
 
 ## Como visualizar
 O projeto está publicado via GitHub Pages e pode ser acessado no link abaixo:
-(https://portf-lio-pessoal-gz4of0pn5-gihbogner-6904s-projects.vercel.app/)
+(https://portf-lio-pessoal-flame.vercel.app/)
 
 ## Contato
 LinkedIn: ttps://www.linkedin.com/in/giovanni-crescenzi-bogner-63b818303
