@@ -1,163 +1,234 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giovanni Crescenzi Bogner</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- =============================================
+     NAV — logo + links de seção + troca de idioma
+     O seletor de idioma fica aqui pra ser fácil de achar
+     ============================================= -->
 <nav>
   <div class="nav-logo">GB.</div>
+
   <ul class="nav-links">
-    <li><a href="#about">Sobre</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projetos</a></li>
-    <li><a href="#experience">Experiência</a></li>
-    <li><a href="#contact">Contato</a></li>
+    <li><a href="#about"   data-i18n="nav_about">Sobre</a></li>
+    <li><a href="#skills"  data-i18n="nav_skills">Skills</a></li>
+    <li><a href="#projects"data-i18n="nav_projects">Projetos</a></li>
+    <li><a href="#experience" data-i18n="nav_exp">Experiência</a></li>
+    <li><a href="#contact" data-i18n="nav_contact">Contato</a></li>
   </ul>
+
+  <!-- Os três botões de idioma — simples assim -->
+  <div class="lang-switcher">
+    <button class="lang-btn active" data-lang="pt">PT</button>
+    <button class="lang-btn"        data-lang="en">EN</button>
+    <button class="lang-btn"        data-lang="es">ES</button>
+  </div>
 </nav>
 
+
+<!-- =============================================
+     HERO — primeira coisa que o visitante vê
+     Nome grande, tagline e os três números que dizem bastante
+     ============================================= -->
 <div id="hero">
   <div class="hero-inner">
+
     <div class="hero-tag reveal">
       <div class="hero-dot"></div>
-      Disponível para oportunidades
+      <span data-i18n="hero_available">Disponível para oportunidades</span>
     </div>
+
     <h1 class="hero-name reveal">
       Giovanni<br>
       <span class="line2">Crescenzi Bogner</span>
     </h1>
+
     <p class="hero-tagline reveal">
-      Construo <strong>interfaces que não só funcionam</strong>, mas ajudam a entender dados e tomar melhores decisões.
-      Front-end com visão de produto, análise de dados e experiência real com usuário.
+      <span data-i18n="hero_tagline">
+        Construo <strong>interfaces que não só funcionam</strong>, mas ajudam a entender dados e tomar melhores decisões.
+        Front-end com visão de produto, análise de dados e experiência real com usuário.
+      </span>
     </p>
+
     <div class="hero-cta reveal">
-      <a href="#projects" class="btn-primary">Ver projetos →</a>
-      <a href="#contact" class="btn-secondary">Entrar em contato</a>
+      <a href="#projects" class="btn-primary" data-i18n="hero_cta_projects">Ver projetos →</a>
+      <a href="#contact"  class="btn-secondary" data-i18n="hero_cta_contact">Entrar em contato</a>
     </div>
+
+    <!-- Três coisas que resumem bem quem é o Giovanni -->
     <div class="hero-grid reveal">
       <div class="hero-stat">
         <div class="hero-stat-num">3+</div>
-        <div class="hero-stat-label">Áreas de atuação</div>
+        <div class="hero-stat-label" data-i18n="stat_areas">Áreas de atuação</div>
       </div>
       <div class="hero-stat">
         <div class="hero-stat-num">SQL</div>
-        <div class="hero-stat-label">Nível avançado</div>
+        <div class="hero-stat-label" data-i18n="stat_sql">Nível avançado</div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-num">ES </div>
-        <div class="hero-stat-label">Espanhol avançado</div>
+        <div class="hero-stat-num">ES</div>
+        <div class="hero-stat-label" data-i18n="stat_es">Espanhol avançado</div>
       </div>
     </div>
+
   </div>
 </div>
 
+
+<!-- =============================================
+     SOBRE MIM — texto humano, sem papo de LinkedIn
+     Os cards do lado contam partes da história que
+     a maioria dos devs não tem
+     ============================================= -->
 <section id="about">
-  <div class="section-label reveal">Sobre mim</div>
-  <h2 class="section-title reveal">Um dev que entende<br><span>de dados e de gente</span></h2>
+  <div class="section-label reveal" data-i18n="about_label">Sobre mim</div>
+  <h2 class="section-title reveal">
+    <span data-i18n="about_title">Um dev que entende<br><em>de dados e de gente</em></span>
+  </h2>
+
   <div class="about-grid">
     <div class="about-text reveal">
-      <p>Sou desenvolvedor front-end com um perfil que foge do padrão: além de escrever código, gosto de entender <strong>por que aquilo faz sentido para o usuário</strong> e o que os dados dizem sobre o comportamento de quem usa o produto.</p>
-      <p>Essa combinação surgiu naturalmente trabalhei com atendimento ao cliente, ensinei programação para crianças e adolescentes, criei uma atlética do zero, e em paralelo fui aprendendo React, SQL e Power BI. Cada experiência me ensinou algo sobre produto, lógica e pessoas.</p>
-      <p>Hoje me vejo como um <strong>desenvolvedor com visão de produto</strong>: consigo tanto implementar uma feature quanto questionar se ela faz sentido para quem vai usar.</p>
+      <p data-i18n="about_p1">
+        Sou desenvolvedor front-end com um perfil que foge do padrão: além de escrever código,
+        gosto de entender <strong>por que aquilo faz sentido para o usuário</strong> e o que os
+        dados dizem sobre quem usa o produto.
+      </p>
+      <p data-i18n="about_p2">
+        Essa combinação surgiu naturalmente — trabalhei com atendimento ao cliente, ensinei
+        programação pra crianças e adolescentes, criei uma atlética do zero, e em paralelo fui
+        aprendendo React, SQL e Power BI. Cada experiência me ensinou algo sobre produto, lógica
+        e pessoas.
+      </p>
+      <p data-i18n="about_p3">
+        Hoje me vejo como um <strong>desenvolvedor com visão de produto</strong>: consigo tanto
+        implementar uma feature quanto questionar se ela faz sentido pra quem vai usar.
+      </p>
     </div>
+
     <div class="about-cards reveal">
       <div class="about-card">
-        <div class="about-card-title">Criou uma atlética do zero</div>
-        <div class="about-card-desc">Liderança, gestão de pessoas, organização de eventos, projeto real com impacto real.</div>
+        <div class="about-card-title" data-i18n="card_atletica_title">Criou uma atlética do zero</div>
+        <div class="about-card-desc"  data-i18n="card_atletica_desc">Liderança, gestão de pessoas e eventos — projeto real com impacto real.</div>
       </div>
       <div class="about-card">
-        <div class="about-card-title">Instrutor de programação</div>
-        <div class="about-card-desc">Ensinar é a melhor forma de aprender. Comunicação técnica e didática apurada.</div>
+        <div class="about-card-title" data-i18n="card_kodland_title">Instrutor de programação</div>
+        <div class="about-card-desc"  data-i18n="card_kodland_desc">Ensinar é a melhor forma de aprender. Comunicação técnica e didática apurada.</div>
       </div>
       <div class="about-card">
-        <div class="about-card-title">Espanhol avançado</div>
-        <div class="about-card-desc">Diferencial real para empresas com atuação internacional ou na América Latina.</div>
+        <div class="about-card-title" data-i18n="card_es_title">Espanhol avançado</div>
+        <div class="about-card-desc"  data-i18n="card_es_desc">Diferencial real para empresas com atuação na América Latina ou no exterior.</div>
       </div>
     </div>
   </div>
 </section>
 
+
+<!-- =============================================
+     SKILLS — divididas em técnicas e soft skills
+     Soft skills estão aqui porque fazem diferença
+     de verdade, especialmente pra quem veio de área
+     que lida com gente
+     ============================================= -->
 <section id="skills">
-  <div class="section-label reveal">Stack técnica</div>
-  <h2 class="section-title reveal">O que eu <span>sei fazer</span></h2>
-  
+  <div class="section-label reveal" data-i18n="skills_label">Stack técnica</div>
+  <h2 class="section-title reveal">
+    <span data-i18n="skills_title">O que eu <em>sei fazer</em></span>
+  </h2>
+
   <div class="skills-grid">
+
     <div class="skill-group reveal">
       <div class="skill-group-header">
-        <div class="skill-group-title">Front-end</div>
+        <div class="skill-group-title" data-i18n="sg_frontend">Front-end</div>
       </div>
       <div class="skill-tags">
         <span class="skill-tag">React</span>
         <span class="skill-tag">Angular</span>
-        <span class="skill-tag">Tailwind CSS</span>
         <span class="skill-tag">JavaScript</span>
-        <span class="skill-tag">HTML/CSS</span>
+        <span class="skill-tag">HTML / CSS</span>
+        <span class="skill-tag">Tailwind CSS</span>
         <span class="skill-tag">Chart.js</span>
-        <span class="skill-tag">UI/UX</span>
+        <span class="skill-tag">UI / UX</span>
       </div>
     </div>
 
     <div class="skill-group reveal">
       <div class="skill-group-header">
-        <div class="skill-group-title">Dados & BI</div>
+        <div class="skill-group-title" data-i18n="sg_data">Dados & BI</div>
       </div>
       <div class="skill-tags">
-        <span class="skill-tag">SQL avançado</span>
+        <span class="skill-tag" data-i18n="tag_sql_adv">SQL avançado</span>
         <span class="skill-tag">Power BI</span>
         <span class="skill-tag">Dashboards</span>
-        <span class="skill-tag">Modelagem</span>
+        <span class="skill-tag" data-i18n="tag_modeling">Modelagem</span>
         <span class="skill-tag">KPIs</span>
-        <span class="skill-tag">Análise de dados</span>
+        <span class="skill-tag" data-i18n="tag_analysis">Análise de dados</span>
       </div>
     </div>
 
     <div class="skill-group reveal">
       <div class="skill-group-header">
-        <div class="skill-group-title">Back-end</div>
+        <div class="skill-group-title" data-i18n="sg_backend">Back-end</div>
       </div>
       <div class="skill-tags">
         <span class="skill-tag">Python</span>
         <span class="skill-tag">APIs REST</span>
-        <span class="skill-tag">Estruturação</span>
+        <span class="skill-tag" data-i18n="tag_structuring">Estruturação de dados</span>
       </div>
     </div>
 
     <div class="skill-group reveal">
       <div class="skill-group-header">
-        <div class="skill-group-title">Soft Skills</div>
+        <div class="skill-group-title" data-i18n="sg_soft">Soft Skills</div>
       </div>
       <div class="skill-tags">
-        <span class="skill-tag">Comunicação clara e didática</span>
-        <span class="skill-tag">Resolução de problemas</span>
-        <span class="skill-tag">Aprendizagem rápida</span>
-        <span class="skill-tag">Pensamento analítico</span>
-        <span class="skill-tag">Trabalho em equipe</span>
-        <span class="skill-tag">Proatividade</span>
-        <span class="skill-tag">Foco no usuário</span>
-        <span class="skill-tag">Adaptabilidade</span>
-        <span class="skill-tag">Visão de produto</span>
+        <span class="skill-tag" data-i18n="soft_comm">Comunicação clara</span>
+        <span class="skill-tag" data-i18n="soft_problem">Resolução de problemas</span>
+        <span class="skill-tag" data-i18n="soft_learn">Aprendizagem rápida</span>
+        <span class="skill-tag" data-i18n="soft_analytical">Pensamento analítico</span>
+        <span class="skill-tag" data-i18n="soft_team">Trabalho em equipe</span>
+        <span class="skill-tag" data-i18n="soft_proactive">Proatividade</span>
+        <span class="skill-tag" data-i18n="soft_user">Foco no usuário</span>
+        <span class="skill-tag" data-i18n="soft_product">Visão de produto</span>
       </div>
     </div>
+
   </div>
 </section>
 
+
+<!-- =============================================
+     PROJETOS — o que já foi construído de verdade
+     O dashboard de emoções é o mais forte por unir
+     front + dados + UX numa entrega só
+     ============================================= -->
 <section id="projects">
-  <div class="section-label reveal">Portfólio</div>
-  <h2 class="section-title reveal">O que já <span>construí</span></h2>
+  <div class="section-label reveal" data-i18n="proj_label">Portfólio</div>
+  <h2 class="section-title reveal">
+    <span data-i18n="proj_title">O que já <em>construí</em></span>
+  </h2>
+
   <div class="projects-grid">
 
+    <!-- Projeto principal -->
     <div class="project-card accent-yellow reveal">
       <div class="project-header">
-        <span class="project-badge badge-yellow"> Destaque</span>
-        <a href="#" class="project-link">(Em andamento no Linkedin) →</a>
+        <span class="project-badge badge-yellow" data-i18n="badge_highlight">⭐ Destaque</span>
+        <a href="https://www.linkedin.com/in/giovanni-crescenzi-bogner-63b818303" target="_blank" class="project-link" data-i18n="proj_link_linkedin">Ver no LinkedIn →</a>
       </div>
-      <div class="project-title">Dashboard de Emoções</div>
-      <div class="project-desc">
-        Interface React para visualização e análise de dados emocionais ao longo do tempo. Filtros dinâmicos por emoção e período, gráficos com gradiente customizado, dados simulados e visual dark moderno. Um projeto que une front-end, dados e UX numa entrega só.
+      <div class="project-title" data-i18n="proj1_title">Dashboard de Emoções</div>
+      <div class="project-desc" data-i18n="proj1_desc">
+        Interface React para visualizar dados emocionais ao longo do tempo. Filtros por emoção e
+        período, gráfico com gradiente customizado e visual dark moderno. Um projeto que une
+        front-end, dados e UX numa entrega só — e foi onde eu vi de perto o quanto design e dado
+        precisam conversar.
       </div>
       <div class="project-meta">
         <div class="project-stack">
@@ -170,31 +241,36 @@
       </div>
     </div>
 
+    <!-- Projeto de dados -->
     <div class="project-card accent-teal reveal">
       <div class="project-header">
-        <span class="project-badge badge-teal">Dados</span>
-        <a href="#" class="project-link">(Em andamento no Linkedin) →</a>
+        <span class="project-badge badge-teal" data-i18n="badge_data">Dados</span>
+        <a href="https://www.linkedin.com/in/giovanni-crescenzi-bogner-63b818303" target="_blank" class="project-link" data-i18n="proj_link_linkedin">Ver no LinkedIn →</a>
       </div>
-      <div class="project-title">Psidly — Análise de dados</div>
-      <div class="project-desc">
-        Sistema focado em estruturação e análise de dados. Modelagem de informações, uso de SQL e geração de insights. Uma prova prática de que consigo ir além do front e pensar em dados com consistência.
+      <div class="project-title">Psidly — <span data-i18n="proj2_subtitle">Análise de dados</span></div>
+      <div class="project-desc" data-i18n="proj2_desc">
+        Sistema com foco em estruturação e análise de dados. Modelagem de informações, SQL e geração
+        de insights reais. É o projeto que mostra que consigo ir além do front-end e pensar em dados
+        com consistência.
       </div>
       <div class="project-meta">
         <div class="project-stack">
           <span class="project-tag">SQL</span>
-          <span class="project-tag">Análise</span>
-          <span class="project-tag">Modelagem</span>
+          <span class="project-tag" data-i18n="tag_analysis">Análise</span>
+          <span class="project-tag" data-i18n="tag_modeling">Modelagem</span>
         </div>
       </div>
     </div>
 
+    <!-- Próximo projeto -->
     <div class="project-card accent-purple reveal">
       <div class="project-header">
-        <span class="project-badge badge-purple">Em breve</span>
+        <span class="project-badge badge-purple" data-i18n="badge_soon">Em breve</span>
       </div>
-      <div class="project-title">Fullstack + API (em construção)</div>
-      <div class="project-desc">
-        Próximo projeto: aplicação fullstack com React no front, Python no back e consumo de API externa. O objetivo é mostrar a evolução natural do meu stack e a capacidade de entregar de ponta a ponta.
+      <div class="project-title" data-i18n="proj3_title">Fullstack + API</div>
+      <div class="project-desc" data-i18n="proj3_desc">
+        Próximo passo: aplicação com React no front, Python no back e consumo de API externa.
+        Não é só pra mostrar que sei fazer — é pra fechar o ciclo e entregar de ponta a ponta.
       </div>
       <div class="project-meta">
         <div class="project-stack">
@@ -208,9 +284,17 @@
   </div>
 </section>
 
+
+<!-- =============================================
+     EXPERIÊNCIA — cada item abre um accordion
+     As descrições foram escritas de um jeito que
+     conta o que foi aprendido, não só o que foi feito
+     ============================================= -->
 <section id="experience">
-  <div class="section-label reveal">Trajetória</div>
-  <h2 class="section-title reveal">De onde <span>vim</span></h2>
+  <div class="section-label reveal" data-i18n="exp_label">Trajetória</div>
+  <h2 class="section-title reveal">
+    <span data-i18n="exp_title">De onde <em>vim</em></span>
+  </h2>
 
   <div class="exp-list reveal">
 
@@ -218,22 +302,22 @@
       <div class="exp-header" onclick="toggleExp(this)">
         <div class="exp-left">
           <div>
-            <div class="exp-role">Instrutor de Programação FreeLancer</div>
+            <div class="exp-role" data-i18n="exp1_role">Instrutor de Programação Freelancer</div>
             <div class="exp-company">Kodland</div>
           </div>
         </div>
         <div style="display:flex;align-items:center;gap:12px">
-          <div class="exp-period">2026 — presente</div>
+          <div class="exp-period">2026 — <span data-i18n="exp_present">presente</span></div>
           <div class="exp-chevron">▼</div>
         </div>
       </div>
       <div class="exp-body">
         <div class="exp-content">
           <ul>
-            <li>Ensinei lógica de programação, HTML, CSS e Python para alunos de 8 a 17 anos</li>
-            <li>Desenvolvi habilidade de comunicar conceitos técnicos de forma clara e acessível</li>
-            <li>Identificei padrões de aprendizagem e adaptei abordagens para diferentes perfis</li>
-            <li>Essa experiência apurou minha visão de usuário: aprendi que a interface mais importante é a mente humana</li>
+            <li data-i18n="exp1_li1">Ensinei lógica de programação, HTML, CSS e Python pra alunos de 8 a 17 anos</li>
+            <li data-i18n="exp1_li2">Aprendi que explicar bem é tão difícil quanto escrever bem — e tão importante</li>
+            <li data-i18n="exp1_li3">Adaptei linguagem e abordagem conforme o perfil de cada aluno</li>
+            <li data-i18n="exp1_li4">A interface mais importante que já precisei otimizar foi a mente humana</li>
           </ul>
         </div>
       </div>
@@ -243,8 +327,8 @@
       <div class="exp-header" onclick="toggleExp(this)">
         <div class="exp-left">
           <div>
-            <div class="exp-role">Fundador</div>
-            <div class="exp-company">Atlética (criada do zero)</div>
+            <div class="exp-role" data-i18n="exp2_role">Fundador</div>
+            <div class="exp-company" data-i18n="exp2_company">Atlética (criada do zero)</div>
           </div>
         </div>
         <div style="display:flex;align-items:center;gap:12px">
@@ -255,10 +339,10 @@
       <div class="exp-body">
         <div class="exp-content">
           <ul>
-            <li>Liderei a criação completa de uma atlética: estrutura, time, eventos e operação</li>
-            <li>Tomada de decisão sob pressão, gestão de pessoas e execução de projeto real</li>
-            <li>Organização de fluxos, comunicação interna e resolução rápida de problemas</li>
-            <li>Experiência de empreendedorismo que poucos juniors têm no currículo</li>
+            <li data-i18n="exp2_li1">Montei a estrutura do zero: time, estatuto, eventos e operação</li>
+            <li data-i18n="exp2_li2">Tomei decisões com impacto real em pessoas reais — isso é diferente de qualquer exercício</li>
+            <li data-i18n="exp2_li3">Aprendi a organizar fluxo, comunicar internamente e resolver problema no susto</li>
+            <li data-i18n="exp2_li4">Experiência de liderança que a maioria dos juniors não tem no currículo</li>
           </ul>
         </div>
       </div>
@@ -267,24 +351,23 @@
     <div class="exp-item">
       <div class="exp-header" onclick="toggleExp(this)">
         <div class="exp-left">
-          <div class="exp-icon"></div>
           <div>
-            <div class="exp-role">Atendimento ao Cliente</div>
-            <div class="exp-company">Castelinho & outros</div>
+            <div class="exp-role" data-i18n="exp3_role">Atendimento ao Cliente</div>
+            <div class="exp-company">Castelinho & <span data-i18n="exp3_others">outros</span></div>
           </div>
         </div>
         <div style="display:flex;align-items:center;gap:12px">
-          <div class="exp-period">Anterior</div>
+          <div class="exp-period" data-i18n="exp_previous">Anterior</div>
           <div class="exp-chevron">▼</div>
         </div>
       </div>
       <div class="exp-body">
         <div class="exp-content">
           <ul>
-            <li>Atendimento direto ao cliente em ambiente de alta demanda</li>
-            <li>Identificação de padrões de comportamento e necessidades não ditas</li>
-            <li>Operação sob pressão com foco em solução rápida</li>
-            <li>Visão de produto nascida da experiência real com usuário final</li>
+            <li data-i18n="exp3_li1">Atendimento direto ao cliente em ambiente de alta demanda e pouco tempo</li>
+            <li data-i18n="exp3_li2">Aprendi a ler o que o cliente quer antes de ele terminar de falar</li>
+            <li data-i18n="exp3_li3">Operação sob pressão com foco em resolver, não em explicar por que não deu</li>
+            <li data-i18n="exp3_li4">Foi aqui que nasceu minha obsessão com experiência do usuário</li>
           </ul>
         </div>
       </div>
@@ -292,32 +375,44 @@
 
   </div>
 
+  <!-- Cards de diferenciais rápidos -->
   <div class="diff-grid">
     <div class="diff-card reveal">
-      <div class="diff-title">Visão de produto</div>
-      <div class="diff-desc">Entendo o negócio por trás do código</div>
+      <div class="diff-title" data-i18n="diff1_title">Visão de produto</div>
+      <div class="diff-desc"  data-i18n="diff1_desc">Entendo o negócio por trás do código</div>
     </div>
     <div class="diff-card reveal">
-      <div class="diff-title">SQL avançado</div>
-      <div class="diff-desc">Combo raro: dev que faz análise de dados</div>
+      <div class="diff-title" data-i18n="diff2_title">SQL avançado</div>
+      <div class="diff-desc"  data-i18n="diff2_desc">Combo raro: dev que também analisa dados</div>
     </div>
     <div class="diff-card reveal">
-      <div class="diff-title">Espanhol avançado</div>
-      <div class="diff-desc">Diferencial para empresas internacionais</div>
+      <div class="diff-title" data-i18n="diff3_title">Espanhol avançado</div>
+      <div class="diff-desc"  data-i18n="diff3_desc">Diferencial real pra empresas internacionais</div>
     </div>
     <div class="diff-card reveal">
-      <div class="diff-title">IA no workflow</div>
-      <div class="diff-desc">Uso prático e produtivo todo dia</div>
+      <div class="diff-title" data-i18n="diff4_title">IA no workflow</div>
+      <div class="diff-desc"  data-i18n="diff4_desc">Uso prático e produtivo todo dia</div>
     </div>
   </div>
 </section>
 
+
+<!-- =============================================
+     CONTATO — direto ao ponto
+     Todos os canais reais do Giovanni
+     ============================================= -->
 <section id="contact">
-  <div class="section-label reveal">Contato</div>
-  <h2 class="section-title reveal">Bora <span>conversar?</span></h2>
-  <p class="contact-sub reveal">Aberto a estágios, freelas e oportunidades júnior.<br>Me manda uma mensagem, respondo rápido.</p>
+  <div class="section-label reveal" data-i18n="contact_label">Contato</div>
+  <h2 class="section-title reveal">
+    <span data-i18n="contact_title">Bora <em>conversar?</em></span>
+  </h2>
+  <p class="contact-sub reveal" data-i18n="contact_sub">
+    Aberto a estágios, freelas e oportunidades júnior.<br>
+    Me manda uma mensagem — respondo rápido.
+  </p>
+
   <div class="contact-links reveal">
-    <a href="mailto:seuemail@email.com" class="contact-link">
+    <a href="mailto:gihbogner@gmail.com" class="contact-link">
       <span class="icon">✉️</span> gihbogner@gmail.com
     </a>
     <a href="https://www.linkedin.com/in/giovanni-crescenzi-bogner-63b818303" class="contact-link" target="_blank">
